@@ -1,0 +1,16 @@
+{% extends "layout.html" %} 
+{% block blk_cat_list %}
+<h2>Categories</h2>
+<table>
+    {% for category in categories %}
+    <tr>
+        <td><a href='/category/view/{{category.id}}'>{{ category.description }}</a></td>
+    </tr>
+    {% else %}
+    <li>
+        <em> No categories</em>
+    {% endfor %}
+
+</table>
+
+{% endblock %}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sports Goods Store</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <a class="navbar-brand" href="#">SPORTS CATALOG</a>
+        <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="#">HOME</a>
+            </li>
+            <li>
+                <a href="#">LATEST ITEMS</a>
+            </li>
+            <li>
+                <a href="#">CATEGORIES</a>
+            </li>
+            <li>
+                <a href="#">LOGIN</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                {% block blk_cat_list %} {% endblock %}
+            </div>
+            <div class="col-md-8">
+                {% block blk_item_list %} {% endblock %}
+            </div>
+            <div class="col-md-2">
+                <h2>New Arrivals</h2>
+                <p>Latest item list goes here ...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
